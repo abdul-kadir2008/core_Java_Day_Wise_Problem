@@ -1,1 +1,29 @@
+class ReverseWords {
+    public static void main(String[] args) {
+
+        String str = "Java is very easy";
+
+        // Step 1: sentence ko words me tod do
+        String[] words = str.split(" ");
+
+        // Step 2: har word ko reverse karo
+        for (int i = 0; i < words.length; i++) {
+            String word = words[i];
+            String rev = "";
+
+            for (int j = word.length() - 1; j >= 0; j--) {
+                rev = rev + word.charAt(j);
+            }
+
+            // reversed word ko wapas array me rakho
+            words[i] = rev;
+        }
+
+        // Step 3: sab words ko ek sentence me jodo
+        String result = String.join(" ", words);
+
+        // Step 4: output print karo
+        System.out.println(result);
+    }
+}
 
